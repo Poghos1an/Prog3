@@ -1,36 +1,29 @@
-class Grass {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.index = 1;
-        this.multiply = 0;
-        this.directions = [
-            [this.x - 1, this.y - 1],
-            [this.x, this.y],
-            [this.x, this.y - 1],
-            [this.x + 1, this.y - 1],
-            [this.x - 1, this.y],
-            [this.x + 1, this.y],
-            [this.x - 1, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x + 1, this.y + 1]
-        ];
-    }
+class Grass extends LivingCreature{
+    
+    // constructor(x, y) {
+    //     this.x = x;
+    //     this.y = y;
+    //     //this.index = 1;
+    //     this.multiply = 0;
+    //     this.directions = [
+    //         [this.x - 1, this.y - 1],
+    //         [this.x, this.y],
+    //         [this.x, this.y - 1],
+    //         [this.x + 1, this.y - 1],
+    //         [this.x - 1, this.y],
+    //         [this.x + 1, this.y],
+    //         [this.x - 1, this.y + 1],
+    //         [this.x, this.y + 1],
+    //         [this.x + 1, this.y + 1]
+    //     ];
+    // }
 
-    chooseCell(character) {
-        var found = [];
-        for (var i in this.directions) {
-            var x = this.directions[i][0];
-            var y = this.directions[i][1];
-            if (x >= 0 && x < Matrix[0].length && y >= 0 && y < Matrix.length) {
-                if (Matrix[y][x] == character) {
-                    found.push(this.directions[i]);
-                }
-            }
-        }
-        return found;
-    }
+    // chooseCell(character) {
+    //     return super.chooseCell(character);
+    // }
+
     //Multiply of grass
+
     mul() {
         this.multiply++;
         var emptyCells = this.chooseCell(0);
