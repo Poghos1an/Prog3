@@ -1,37 +1,43 @@
-class Killer {
+class Killer extends LivingCreature {
     constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.directions = [];
+        super(x, y);
         this.energy = 20;
+    }
 
-    }
-    getNewCoordinates() {
-        this.directions = [
-            [this.x - 1, this.y - 1],
-            [this.x, this.y - 1],
-            [this.x + 1, this.y - 1],
-            [this.x - 1, this.y],
-            [this.x + 1, this.y],
-            [this.x - 1, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x + 1, this.y + 1]
-        ];
-    }
-    chooseCell(character) {
-        this.getNewCoordinates();
-        var found = [];
-        for (var i in this.directions) {
-            var x = this.directions[i][0];
-            var y = this.directions[i][1];
-            if (x >= 0 && x < Matrix[0].length && y >= 0 && y < Matrix.length) {
-                if (Matrix[y][x] == character) {
-                    found.push(this.directions[i]);
-                }
-            }
-        }
-        return found;
-    }
+    // class Killer {
+    //     constructor(x, y) {
+    //         this.x = x;
+    //         this.y = y;
+    //         this.directions = [];
+    //         this.energy = 20;
+
+    //     }
+    //     getNewCoordinates() {
+    //         this.directions = [
+    //             [this.x - 1, this.y - 1],
+    //             [this.x, this.y - 1],
+    //             [this.x + 1, this.y - 1],
+    //             [this.x - 1, this.y],
+    //             [this.x + 1, this.y],
+    //             [this.x - 1, this.y + 1],
+    //             [this.x, this.y + 1],
+    //             [this.x + 1, this.y + 1]
+    //         ];
+    //     }
+    //     chooseCell(character) {
+    //         this.getNewCoordinates();
+    //         var found = [];
+    //         for (var i in this.directions) {
+    //             var x = this.directions[i][0];
+    //             var y = this.directions[i][1];
+    //             if (x >= 0 && x < Matrix[0].length && y >= 0 && y < Matrix.length) {
+    //                 if (Matrix[y][x] == character) {
+    //                     found.push(this.directions[i]);
+    //                 }
+    //             }
+    //         }
+    //         return found;
+    //     }
 
     move() {
         this.energy -= 2
@@ -66,7 +72,7 @@ class Killer {
             this.y = redCell[1];
             Matrix[this.y][this.x] = 6;
 
-            this.energy+=5;
+            this.energy += 5;
 
             for (let index = 0; index < PredatorArr.length; index++) {
                 if (PredatorArr[index].x == this.x && PredatorArr[index].y == this.y) {
