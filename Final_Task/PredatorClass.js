@@ -2,7 +2,6 @@ class Predator {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.index = 1;
         this.directions = [];
         this.energy = 30;
 

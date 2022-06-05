@@ -2,7 +2,6 @@ class Grib {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.index = 1;
         this.multiply = 0;
 
         this.directions = [

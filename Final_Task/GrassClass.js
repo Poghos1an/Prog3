@@ -1,21 +1,27 @@
 class Grass extends LivingCreature{
+    constructor(x,y){
+        super(x,y);
+        // this.directions = [
+        //     [this.x, this.y],
+        // ];
+    }
     
     // constructor(x, y) {
     //     this.x = x;
     //     this.y = y;
-    //     //this.index = 1;
     //     this.multiply = 0;
-    //     this.directions = [
-    //         [this.x - 1, this.y - 1],
-    //         [this.x, this.y],
-    //         [this.x, this.y - 1],
-    //         [this.x + 1, this.y - 1],
-    //         [this.x - 1, this.y],
-    //         [this.x + 1, this.y],
-    //         [this.x - 1, this.y + 1],
-    //         [this.x, this.y + 1],
-    //         [this.x + 1, this.y + 1]
-    //     ];
+
+        // this.directions = [
+        //     [this.x - 1, this.y - 1],
+        //     [this.x, this.y],
+        //     [this.x, this.y - 1],
+        //     [this.x + 1, this.y - 1],
+        //     [this.x - 1, this.y],
+        //     [this.x + 1, this.y],
+        //     [this.x - 1, this.y + 1],
+        //     [this.x, this.y + 1],
+        //     [this.x + 1, this.y + 1]
+        // ];
     // }
 
     // chooseCell(character) {
