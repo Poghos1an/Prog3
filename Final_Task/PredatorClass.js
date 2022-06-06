@@ -1,7 +1,7 @@
 class Predator extends LivingCreature {
     constructor(x, y) {
         super(x, y);
-        this.energy = 20;
+        this.energy = 30;
     }
 
     // class Predator {
@@ -23,20 +23,6 @@ class Predator extends LivingCreature {
     //             [this.x, this.y + 1],
     //             [this.x + 1, this.y + 1]
     //         ];
-    //     }
-    //     chooseCell(character) {
-    //         this.getNewCoordinates();
-    //         var found = [];
-    //         for (var i in this.directions) {
-    //             var x = this.directions[i][0];
-    //             var y = this.directions[i][1];
-    //             if (x >= 0 && x < Matrix[0].length && y >= 0 && y < Matrix.length) {
-    //                 if (Matrix[y][x] == character) {
-    //                     found.push(this.directions[i]);
-    //                 }
-    //             }
-    //         }
-    //         return found;
     //     }
 
     move() {

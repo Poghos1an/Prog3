@@ -5,9 +5,7 @@ class Grass extends LivingCreature {
         //     [this.x, this.y],
         // ];
     }
-
-    //vonc avelacnel ayd mi tvyal@
-    //naev nuin@ harcnel energetik u grib classeri pahov
+    //push bdi enel
 
 
     // constructor(x, y) {
